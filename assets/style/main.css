@@ -1,0 +1,30 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+html {
+    font-family: sans-serif;
+};
+
+body {
+    margin: 3rem;
+    background-color: red;
+};
+
+.header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+};
+
+.menu {
+    display: flex;
+};
+
+.menu a {
+    margin-left: 1.5rem;
+}
