@@ -8,12 +8,15 @@
     <?= css('assets/style/main.css') ?>
 </head>
 <body>
-<header class="header">
-    <a href="<?= $site->url() ?>" class="logo">DS</a>
-    <nav class="menu">
-        <?php foreach ($site->children()->listed() as $subpage): ?>
-            <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
-        <?php endforeach ?>
-    </nav>
-</header>
-<h1><?= $page->title() ?></h1>
+<div class="container mx-auto">
+    <header class="bg-neonGreen">
+        <a href="<?= $site->url() ?>">DS</a>
+        <nav class="menu">
+            <?php foreach ($site->children()->listed() as $subpage): ?>
+                <a href="<?= $subpage->url() ?>">
+                    <?= $subpage->title() ?>
+                </a>
+            <?php endforeach ?>
+        </nav>
+    </header>
+    <h1 class="text-4xl"><?= $page->title() ?></h1>
