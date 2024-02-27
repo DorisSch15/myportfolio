@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="container mx-auto">
-    <header class="bg-neonGreen">
-        <a href="<?= $site->url() ?>">DS</a>
-        <nav class="menu">
+    <header class="flex justify-between bg-neonGreen">
+        <a class="block" href="<?= $site->url() ?>">DS</a>
+        <nav class="flex">
             <?php foreach ($site->children()->listed() as $subpage): ?>
                 <a href="<?= $subpage->url() ?>">
                     <?= $subpage->title() ?>
@@ -19,4 +19,3 @@
             <?php endforeach ?>
         </nav>
     </header>
-    <h1 class="text-4xl"><?= $page->title() ?></h1>
