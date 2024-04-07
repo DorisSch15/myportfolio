@@ -1,8 +1,8 @@
 <?php snippet('header') ?>
 
-<ul class="grid mobile:grid-rows-1 tablet:grid-rows-2 desktop:grid-rows-3">
+<ul class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-12">
     <?php foreach ($page->children()->listed() as $project): ?>
-        <li class="w-4/12">
+        <li class="p-4 border-2 border-darkPurple">
             <a href="<?= $project->url() ?>" class="<?= $project->title() ?>">
                 <?php if ($image = $project->image()): ?>
                     <figure>
