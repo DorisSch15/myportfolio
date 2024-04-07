@@ -1,0 +1,7 @@
+Titlehighlight1:
+
+Dein Webauftritt zum Erfolg
+TitleRest1: - meine Mission.
+
+Text1: Lass uns gemeinsam durchstarten. Mit einem einfachen CMS (Kirby) und meinem KnowHow erreichen wir Grosses.
+

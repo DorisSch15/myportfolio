@@ -6,6 +6,12 @@ module.exports = {
     "./src/**/*.{js,php,html}",
   ],
   theme: {
+    screens: {
+      'sm': '640px', // mobile
+      'lg': '1024px', // tablet
+      'xl': '1280px', // desktop
+      '2xl': '1536px',
+    },
     container: {
       center: true,
       padding: {
@@ -18,7 +24,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Open_Sans", "sans-serif"],
         serif: ["Merriweather", "serif"],
       },
       fontSize: {

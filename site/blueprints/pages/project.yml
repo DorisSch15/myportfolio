@@ -1,0 +1,12 @@
+title: Project
+
+sections:
+  info:
+    type: fields
+  gallery:
+    type: files
+    layout: cards
+    image:
+      ratio: 1/1
+
+
