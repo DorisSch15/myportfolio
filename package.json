@@ -1,5 +1,5 @@
 {
-    "name": "projectname",
+    "name": "myportfolio",
     "scripts": {
         "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/style/main.css --content './site/**/*.php' -w",
         "server": "composer start",

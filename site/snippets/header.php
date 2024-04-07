@@ -7,11 +7,10 @@
 
     <?= css('assets/style/main.css') ?>
 </head>
-<body>
-<div class="container mx-auto">
-    <header class="flex justify-between bg-neonGreen">
-        <a class="block" href="<?= $site->url() ?>">DS</a>
-        <nav class="flex">
+<body class="bg-bgColor">
+    <header class=" container mx-auto flex justify-between">
+        <a class="block text-heroColor" href="<?= $site->url() ?>">Doris Scheliessnig</a>
+        <nav class="flex text-textColor">
             <?php foreach ($site->children()->listed() as $subpage): ?>
                 <a href="<?= $subpage->url() ?>">
                     <?= $subpage->title() ?>

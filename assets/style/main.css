@@ -818,14 +818,9 @@ select {
   border-width: 2px;
 }
 
-.border-darkPurple {
-  --tw-border-opacity: 1;
-  border-color: rgb(33 25 81 / var(--tw-border-opacity));
-}
-
-.bg-neonGreen {
+.bg-bgColor {
   --tw-bg-opacity: 1;
-  background-color: rgb(21 245 186 / var(--tw-bg-opacity));
+  background-color: rgb(3 4 23 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -834,6 +829,16 @@ select {
 
 .text-4xl {
   font-size: clamp(3.05rem, calc(2.79rem + 1.33vw), 3.82rem);
+}
+
+.text-textColor {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
+.text-heroColor {
+  --tw-text-opacity: 1;
+  color: rgb(53 243 166 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
