@@ -16,5 +16,6 @@
         </li>
     <?php endforeach ?>
 </ul>
+
 <?php snippet('footer') ?>
 
