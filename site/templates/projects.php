@@ -10,7 +10,7 @@
     <section class="py-4">
         <div class="container">
             <?php if ($projectsPage = page('projects')): ?>
-                <ul class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-6 gap-4 mt-12">
+                <ul class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-12">
                 <?php foreach ($projectsPage->children()->listed() as $project): ?>
                     <li class="border-2 hover:border-4 border-heroColor opacity-75 hover:opacity-100 rounded-xl overflow-hidden">
                         <a href="<?= $project->url() ?>">
