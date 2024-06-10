@@ -13,7 +13,4 @@ function toggleMenu(){
     mobileMenu.classList.toggle('hidden')
 
     console.log('i got clicked')
-};
-
-
-
+}; 

@@ -2,67 +2,92 @@
 
 <main>
     <!-- headingSection -- Text and Picture -->
-    <section class="py-12"> 
+    <section class="py-12 bg-yellow-300"> 
         <div class="container grid grid-cols-2 gap-2 md:grid-cols-8 md:gap-4 lg:grid-cols-12 lg:gap-6 xl:gap-8 items-center bg-yellow-300 md:bg-red-400 lg:bg-blue-400 xl:bg-gray-400">
         <?php if ($homePage = page('home')): ?>
-            <div class="col-span-2 md:col-span-4 lg:col-span-6 xl:col-span-6">
-                <h1 class="text-xl xl:text-4xl text-heroColor"><?= $homePage->title() ?></h1>
-                <p class="text-base mt-4 xl:text-lg text-textColor"><?= $homePage->text() ?></p>
+            <div class="h-96 col-span-2 md:col-span-4 lg:col-span-6 xl:col-span-6">
+                <h1 class="text-3xl xl:text-4xl text-textColor">
+                    <!-- Showing text with two different colors -->
+                    <?php
+                        // Sample input string
+                        $input = "**Loyal, teamfähig und verantwortungsbewusst** - gemeinsam Kunden im Webbereich weiterbringen";
+
+                        // Regular expression pattern to match **text**
+                        $pattern = '/\*\*(.*?)\*\*/';
+
+                        // Replacement pattern with <strong> tags
+                        $replacement = '<strong class="text-heroColor">$1</strong>';
+
+                        // Perform the replacement
+                        $output = preg_replace($pattern, $replacement, $input);
+
+                        // Output the result
+                        echo $output;
+                    ?>
+                </h1>
+                <p class="text-lg my-8 text-textColor"><?= $homePage->text() ?></p>
                 <button class="w-fit p-2 my-8 bg-btnColor rounded-md text-textColor">
                     <a href="<?= $site->page('contact') ?>">Jetzt Kontakt aufnehmen</a>
                 </button>
             </div>
         <?php endif ?>
             <div class="relative col-end-3 md:col-end-9 md:col-span-3 lg:col-end-13 lg:col-span-4">
-                <img class="absolute -right-20 md:static w-full aspect-square" src="./../assets/svgs/me.svg" alt="That's me :)">
-                <img class="absolute sm:size-90 sm:-top-24 sm:-left-28 md:-top-20 md:-left-24 lg:-top-16 lg:-left-32 xl:-top-16 xl:-left-44" src="./../assets/svgs/arrow.svg" alt="Pfeil">
+                <img class="-right-40 h-100 aspect-square" src="./../assets/svgs/me.svg" alt="That's me :)">
+                <img class="absolute sm:size-90 sm:-top-24 sm:-left-28 md:-top-20 md:-left-24 lg:-top-20 lg:-left-32 xl:-top-16 xl:-left-44" src="./../assets/svgs/arrow.svg" alt="Pfeil">
             </div>
         </div>
     </section>
     <!-- ICONS -->
     <section class="py-12">
-        <div class="container grid grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-none">
-            <div class="w-full md:row-start-1">
-                <h3 class="text-base text-heroColor">Grundkenntnisse</h3>
-                <ul class="flex justify-between">
-                    <li><img class="size-8" src="./../assets/svgs/html.svg" alt="HTML"></li>
-                    <li><img class="size-8" src="./../assets/svgs/css.svg" alt="CSS"></li>
-                    <li><img class="size-8" src="./../assets/svgs/js.svg" alt="JavaScript"></li>
-                    <li><img class="size-8" src="./../assets/svgs/node-js.svg" alt="Node JS"></li>
-                    <li><img class="size-8" src="./../assets/svgs/php.svg" alt="PHP"></li>
-                    <li><img class="size-8" src="./../assets/svgs/git.svg" alt="git"></li>
-                </ul>
-            </div>
-            <div class="w-full md:row-start-2 lg:row-start-1 lg:col-start-2">
-                <h3 class="text-base text-heroColor">Anwenderkenntnisse</h3>
-                <ul class="flex justify-between">
-                    <li><img class="size-8" src="./../assets/svgs/sass.svg" alt="sass"></li>
-                    <li><img class="size-8" src="./../assets/svgs/kirby.svg" alt="kirby"></li>
-                    <li><img class="size-8" src="./../assets/svgs/figma.svg" alt="figma"></li>
-                    <li><img class="size-8"  src="./../assets/svgs/npm.svg" alt="npm"></li>
-                </ul>
+        <div class="container">
+            <h2 class="text-center text-3xl text-heroColor">Programme/Spachen, mit denen ich arbeite:</h2>
+            <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-9">
+                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./../assets/svgs/html.svg" alt="HTML" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./../assets/svgs/css.svg" alt="CSS" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="./../assets/svgs/node-js.svg" alt="NodeJS" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="./../assets/svgs/php.svg" alt="PHP" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-4 lg:col-span-1" src="./../assets/svgs/git.svg" alt="git" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="./../assets/svgs/sass.svg" alt="Sass" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="./../assets/svgs/kirby.svg" alt="Kirby" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="./../assets/svgs/figma.svg" alt="Figma" width="158" height="48">
+                <img class="col-span-2 max-h-12 w-full object-contain col-start-2 sm:col-start-3 lg:col-span-1" src="./../assets/svgs/npm.svg" alt="npm" width="158" height="48">
             </div>
         </div>
     </section>
+    <!-- BlOG -->
     <section class="py-12">
         <div class="container">
             <?php if ($projectsPage = page('projects')): ?>
-                <ul class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mt-12">
-                <?php foreach ($projectsPage->children()->listed()->limit(4) as $project): ?>
-                    <li class="border-2 hover:border-4 border-heroColor opacity-75 hover:opacity-100 rounded-xl overflow-hidden">
-                        <a href="<?= $project->url() ?>">
+                <ul class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-12">
+                <?php foreach ($projectsPage->children()->listed()->limit(6) as $project): ?>
+                        <li class="h-full flex flex-col border-2 border-heroColor opacity-75 hover:opacity-100 rounded-xl overflow-hidden transition duration-255">
                             <?php if ($image = $project->image()): ?>
-                                <img class="w-100 border-b-2 border-heroColor" src="<?=     $project->image()->crop(800,600)->url() ?>">
-                                <div class="m-4">
-                                    <h5 class="mb-4 text-lg text-heroColor font-bold"><?= $project->title() ?></h5>
-                                    <p class="text-textColor text-base line-clamp-3"><?= $project->text() ?></p>
-                                    <div class="flex flex-row-reverse">
-                                        <button class="mt-4 text-heroColor font-bold uppercase">Weiterlesen</button>
+                                <a href="<?= $project->url() ?>">
+                                    <img class="w-100 border-b-2 border-heroColor" src="<?=$project->image()->crop(800,600)->url() ?>">
+                                </a>
+                                <div class="h-full m-4 flex flex-col justify-between">
+                                    <div>
+                                        <h5 class="mb-4 h-14 text-lg text-textColor font-bold line-clamp-2">
+                                            <a href="<?= $project->url() ?>">
+                                                <?= $project->title() ?>
+                                            </a>
+                                        </h5>
+                                        <p class="text-textColor text-base line-clamp-3">
+                                            <a href="<?= $project->url() ?>">
+                                                <?= $project->text() ?>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row-reverse mt-8">
+                                        <button class="mt-4 text-heroColor font-bold uppercase underline decoration-textColor">
+                                            <a href="<?= $project->url() ?>">
+                                                Weiterlesen
+                                            </a>
+                                        </button>
                                     </div>
                                 </div>
                             <?php endif ?>
-                        </a>
-                    </li>
+                        </li>
                 <?php endforeach ?>
                 </ul>
             <?php endif ?>
