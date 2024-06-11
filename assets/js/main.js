@@ -1,16 +1,18 @@
 // navigationHamburger
+const mobileMenuOpenButton = document.querySelector("#mobile-menu-open");
+const mobileMenuCloseButton = document.querySelector("#mobile-menu-close");
+const nav = document.querySelector("#nav");
 
-    const btnHamIcon = document.getElementById('btn-hamIcon');
-    const mobileMenu = document.getElementById('navMobile');
-    const btnHamClose = document.getElementById('btn-hamClose');
+mobileMenuOpenButton.addEventListener("click", () => {
+  // make the nav visible via style
+  nav.style.display = "block";
+  mobileMenuCloseButton.style.display = "block";
+  mobileMenuOpenButton.style.display = "none";
+});
 
-    btnHamIcon.addEventListener('click', toggleMenu);
-    btnHamClose.addEventListener('click', toggleMenu);
-
-
-function toggleMenu(){
-    mobileMenu.classList.toggle('flex')
-    mobileMenu.classList.toggle('hidden')
-
-    console.log('i got clicked')
-}; 
+mobileMenuCloseButton.addEventListener("click", () => {
+  // make the nav invisible via style
+  nav.style.display = "none";
+  mobileMenuCloseButton.style.display = "none";
+  mobileMenuOpenButton.style.display = "block";
+});
