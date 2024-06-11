@@ -4,15 +4,15 @@ const mobileMenuCloseButton = document.querySelector("#mobile-menu-close");
 const nav = document.querySelector("#nav");
 
 mobileMenuOpenButton.addEventListener("click", () => {
-  // make the nav visible via style
-  nav.style.display = "block";
-  mobileMenuCloseButton.style.display = "block";
-  mobileMenuOpenButton.style.display = "none";
+  // change visibility when the hamburger is clicked
+  nav.classList.toggle("hidden");
+  mobileMenuOpenButton.classList.add("hidden");
+  mobileMenuCloseButton.classList.remove("hidden");
 });
 
 mobileMenuCloseButton.addEventListener("click", () => {
-  // make the nav invisible via style
-  nav.style.display = "none";
-  mobileMenuCloseButton.style.display = "none";
-  mobileMenuOpenButton.style.display = "block";
+  // change visibility when the close button is clicked
+  nav.classList.toggle("hidden");
+  mobileMenuOpenButton.classList.remove("hidden");
+  mobileMenuCloseButton.classList.add("hidden");
 });
