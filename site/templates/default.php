@@ -2,10 +2,10 @@
 
 <main>
     <!-- headingSection -- Text and Picture -->
-    <section class="py-12 bg-yellow-300"> 
-        <div class="container grid grid-cols-2 gap-2 md:grid-cols-8 md:gap-4 lg:grid-cols-12 lg:gap-6 xl:gap-8 items-center bg-yellow-300 md:bg-red-400 lg:bg-blue-400 xl:bg-gray-400">
-        <?php if ($homePage = page('home')): ?>
-            <div class="h-96 col-span-2 md:col-span-4 lg:col-span-6 xl:col-span-6">
+    <section class="py-12"> 
+        <div class="container grid grid-cols-1 md:grid-cols-12">
+            <?php if ($homePage = page('home')): ?>
+            <div class="md:col-span-7 lg:col-span-6">
                 <h1 class="text-3xl xl:text-4xl text-textColor">
                     <!-- Showing text with two different colors -->
                     <?php
@@ -30,11 +30,16 @@
                     <a href="<?= $site->page('contact') ?>">Jetzt Kontakt aufnehmen</a>
                 </button>
             </div>
-        <?php endif ?>
-            <div class="relative col-end-3 md:col-end-9 md:col-span-3 lg:col-end-13 lg:col-span-4">
-                <img class="-right-40 h-100 aspect-square" src="./../assets/svgs/me.svg" alt="That's me :)">
-                <img class="absolute sm:size-90 sm:-top-24 sm:-left-28 md:-top-20 md:-left-24 lg:-top-20 lg:-left-32 xl:-top-16 xl:-left-44" src="./../assets/svgs/arrow.svg" alt="Pfeil">
+            <?php endif ?>
+            <div class="relative justify-center col-end-2 md:col-end-13 md:col-span-5 lg:col-end-13 lg:col-span-4">
+                <img class="absolute md:-top-24 md:-left-52 md:-z-10" src="./../assets/svgs/arrow.svg" alt="Pfeil">
+                <img class="bg-heroColor right-6 rounded-3xl origin-bottom -rotate-6 md:translate-x-0" src="./../assets/svgs/aboutme-test.svg" alt="That's me :)">
             </div>
+        
+        <!-- <div class="col-end-13"> -->
+                <!-- <img class="-right-40 h-100 aspect-square" src="./../assets/svgs/me.svg" alt="That's me :)">
+                <img class="absolute sm:size-90 sm:-top-24 sm:-left-28 md:-top-20 md:-left-24 lg:-top-20 lg:-left-32 xl:-top-16 xl:-left-44" src="./../assets/svgs/arrow.svg" alt="Pfeil"> -->
+            <!-- </div> -->
         </div>
     </section>
     <!-- ICONS -->
